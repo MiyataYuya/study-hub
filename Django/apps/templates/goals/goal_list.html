@@ -1,0 +1,10 @@
+<h1>学習目標一覧</h1>
+<ul>
+    {% for goal in goals %}
+        <li>
+            <a href="{% url 'goal_detail' goal.pk %}">{{ goal.title }}</a>
+            - {{ goal.start_date }} から {{ goal.end_date }} まで
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'goal_create' %}">新しい学習目標を作成</a>

@@ -1,0 +1,9 @@
+<h1>{{ object.title }}</h1>
+<p>{{ object.description }}</p>
+<p>開始日: {{ object.start_date }}</p>
+<p>終了予定日: {{ object.end_date }}</p>
+<p>完了: {{ object.is_completed }}</p>
+
+<a href="{% url 'goal_update' object.pk %}">編集</a>
+<a href="{% url 'goal_delete' object.pk %}">削除</a>
+<a href="{% url 'goal_list' %}">一覧に戻る</a>
